@@ -1,0 +1,140 @@
+@import "@fontsource/inter";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/inter/900.css";
+
+:root {
+    color: black;
+    background-color: #f6f6f6;
+    font-family: "Inter", sans-serif;
+    --primary: #ff4385;
+    --primary-light: #fdf2f5;
+    --subtle: #bababa;
+    --border-subtle: #ddd;
+}
+
+@layer utility {
+    .text-subtle {
+        color: #a6a6a6;
+    }
+}
+
+#root {
+    padding: 2rem;
+}
+
+.root {
+    max-width: 30rem;
+    margin: 0 auto;
+    border-radius: 2rem;
+    background: #fff;
+    border: 1px solid #dfdfdf;
+    padding: 4rem;
+}
+
+@media screen and (max-width: 640px) {
+    #root {
+        padding: 1.5rem;
+    }
+
+    .root {
+        padding: 2rem;
+    }
+}
+
+.button,
+.name-display {
+    padding: 0.5rem 1rem;
+    background: none;
+    border: 1px solid white;
+    color: black;
+    border-radius: 0.625rem;
+    font-family: inherit;
+    font-weight: 700;
+
+    transition:
+        background-color 200ms,
+        border-color 200ms;
+}
+
+.button.primary {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+    font-weight: 700;
+}
+
+.button.primary:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.button.primary:disabled {
+    background: #ccc;
+    border-color: #ccc;
+    color: #fff;
+}
+
+.button.secondary,
+.name-display {
+    background: #f4f4f4;
+    border-color: #f4f4f4;
+    color: #3e3e3e;
+    font-weight: 500;
+}
+
+.button.secondary:hover {
+    background-color: #eee;
+}
+
+.button.secondary[data-selected~="true"] {
+    border-color: var(--primary);
+}
+
+.button:focus,
+.button:focus-visible {
+    outline: none;
+}
+
+.button:hover {
+    /* background-color: #111; */
+}
+
+.icon-button {
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+}
+
+.icon-button img {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+}
+
+.name-display {
+}
+
+.input {
+    padding: 0.5rem 0.75rem;
+    /* background: #222; */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    /* color: white; */
+    font-family: inherit;
+    min-width: 0;
+}
+
+.input:focus,
+.input:focus-visible {
+    outline: 1px solid var(--primary);
+}
+
+.total-name {
+    color: #3e3e3e;
+    font-weight: 500;
+}
+
+.total-price {
+    color: #685959;
+    font-weight: 700;
+}
